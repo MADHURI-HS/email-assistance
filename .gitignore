@@ -1,0 +1,6 @@
+frontend/node_modules/
+backend/target/
+venv/
+smart_env/
+__pycache__/
+.DS_Store
