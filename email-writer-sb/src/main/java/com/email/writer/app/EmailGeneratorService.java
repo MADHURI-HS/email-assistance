@@ -46,8 +46,6 @@ public class EmailGeneratorService {
            .retrieve()
            .bodyToMono(String.class)
            .block();
-      System.out.println("CALLING URL = " + geminiApiUrl + "?key=" + geminiApiKey);
-
 
 
       return extractResponseContent(response);
