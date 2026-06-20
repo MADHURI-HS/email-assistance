@@ -1,245 +1,96 @@
-# 🚀 AI Email Writer
+# AI Email Writer
 
-An AI-powered Email Writer application that generates professional, context-aware email replies instantly using Generative AI. The project combines a modern React frontend, a Spring Boot backend, and a Chrome browser extension to provide seamless AI-assisted email generation.
-
----
-
-# ✨ Overview
-
-Writing professional emails can be time-consuming. AI Email Writer simplifies this process by automatically generating smart email responses using AI.
-
-This project demonstrates:
-
-* Full-stack development
-* REST API integration
-* Chrome Extension development
-* AI-powered text generation
-* Modern frontend architecture
-* Spring Boot backend development
+A full-stack AI-powered email reply generator — write professional, context-aware email replies instantly using Generative AI. The project combines a Spring Boot backend, a React frontend, and a Chrome Extension for in-browser use.
 
 ---
 
-# 🌟 Key Features
+## Features
 
-✅ AI-generated professional email replies
-✅ Chrome Extension integration
-✅ React-based responsive frontend
-✅ Spring Boot REST API backend
-✅ Clean and scalable architecture
-✅ Fast and intuitive user experience
-✅ Modular project structure
-✅ Real-time API communication
+- **AI-generated email replies** — generates professional, context-aware responses instantly
+- **Chrome Extension integration** — generate replies directly inside your browser, without switching tabs
+- **React frontend** — clean, responsive UI built with React and Vite
+- **Non-blocking backend** — Spring Boot REST API using Spring WebFlux for asynchronous AI service calls
+- **CI/CD pipeline** — GitHub Actions automatically builds and tests the backend on every push
+- **Modular architecture** — frontend, backend, and browser extension are independently developed and deployed
 
----
+## Tech Stack
 
-# 🏗️ System Architecture
+| Layer | Technology |
+|---|---|
+| Backend | Java, Spring Boot, Spring WebFlux, Maven |
+| Frontend | React, Vite, Material UI (MUI), Axios |
+| Browser Extension | Chrome Extension APIs, JavaScript, HTML/CSS |
+| CI/CD | GitHub Actions |
 
-```text
+## Architecture
+
+```
 User → React Frontend / Chrome Extension → Spring Boot Backend → AI Service
 ```
 
----
+The frontend and Chrome Extension both communicate with the Spring Boot backend over REST. The backend uses Spring WebFlux to call the external AI service asynchronously, keeping the API responsive under load.
 
-# 🛠️ Tech Stack
+## Project Structure
 
-## Frontend
-
-* React.js
-* Vite
-* JavaScript
-* Material UI (MUI)
-* Axios
-* CSS
-
-## Backend
-
-* Spring Boot
-* Java 17
-* REST APIs
-* Maven
-* WebFlux
-
-## Browser Extension
-
-* Chrome Extension APIs
-* JavaScript
-* HTML/CSS
-
----
-
-# 📂 Project Structure
-
-```bash
-email_writer/
-│
-├── email-write-react/      # React Frontend
-├── email-writer-sb/        # Spring Boot Backend
+```
+email-assistance/
+├── email-write-react/      # React frontend
+├── email-writer-sb/        # Spring Boot backend
 ├── email_writer_ext/       # Chrome Extension
-└── README.md
+└── .github/workflows/      # CI/CD pipeline
 ```
 
----
+## Running Locally
 
-# ⚙️ Installation & Setup
+### Prerequisites
+- Java 17+
+- Node.js and npm
+- Maven
 
-## 1️⃣ Clone the Repository
-
+### 1. Clone the repository
 ```bash
 git clone https://github.com/MADHURI-HS/email-assistance.git
-```
-
-```bash
 cd email-assistance
 ```
 
----
-
-# ▶️ Backend Setup
-
-Navigate to backend:
-
+### 2. Backend setup
 ```bash
 cd email-writer-sb
-```
-
-Run the Spring Boot application:
-
-```bash
 ./mvnw spring-boot:run
 ```
+Backend runs on `http://localhost:8080`.
 
-Backend server runs on:
-
-```bash
-http://localhost:8080
-```
-
----
-
-# ▶️ Frontend Setup
-
-Navigate to frontend:
-
+### 3. Frontend setup
 ```bash
 cd email-write-react
-```
-
-Install dependencies:
-
-```bash
 npm install
-```
-
-Run development server:
-
-```bash
 npm run dev
 ```
+Frontend runs on `http://localhost:5173`.
 
-Frontend runs on:
+### 4. Chrome Extension setup
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable **Developer Mode**
+3. Click **Load unpacked**
+4. Select the `email_writer_ext` folder
 
-```bash
-http://localhost:5173
-```
+## CI/CD
 
----
+This project uses **GitHub Actions** to automatically build and test the Spring Boot backend on every push, catching integration issues early without manual intervention.
 
-# 🌐 Chrome Extension Setup
+## Future Enhancements
 
-1. Open Chrome browser
-2. Navigate to:
+- Multiple AI tone options
+- Gmail integration
+- Authentication and user accounts
+- Email history storage
+- Cloud deployment
 
-```bash
-chrome://extensions/
-```
-
-3. Enable **Developer Mode**
-4. Click **Load unpacked**
-5. Select the folder:
-
-```bash
-email_writer_ext
-```
-
----
-
-# 📸 Screenshots
-
-## Home Page
-
-*Add frontend screenshot here*
-
-## Generated Email Example
-
-*Add generated response screenshot here*
-
-## Chrome Extension
-
-*Add extension screenshot here*
-
----
-
-# 🔥 Future Enhancements
-
-* Multiple AI tone options
-* Gmail integration
-* Authentication & user accounts
-* Email history storage
-* Dark mode support
-* Multi-language support
-* Cloud deployment
-* AI prompt customization
-
----
-
-# 💡 Learning Outcomes
-
-This project helped in understanding:
-
-* Full-stack application development
-* API communication between frontend & backend
-* Spring Boot REST APIs
-* React component architecture
-* Chrome Extension development
-* AI integration workflows
-* Git & GitHub project management
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
----
-
-# 📄 License
+## License
 
 This project is licensed under the MIT License.
 
----
-
-# 👩‍💻 Author
+## Author
 
 **Madhuri H S**
-
-* GitHub: [https://github.com/MADHURI-HS](https://github.com/MADHURI-HS)
-* Passionate about Full Stack Development & AI-based Applications
-* Open to collaborations and opportunities
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub!
-
-# 👩‍💻 Author
-
-**Madhuri H S**
-
-* GitHub: [https://github.com/MADHURI-HS](https://github.com/MADHURI-HS)
+[GitHub](https://github.com/MADHURI-HS) · Passionate about full-stack development and AI-based applications.
